@@ -1,0 +1,106 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.side-bar {
+    height: 100vh;
+    width: 18%;
+    background-color: #161616 !important;
+    border-right: solid #696969 2px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.side-bar-section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.modify-btns {
+    width: 80%;
+    height: 50px;
+    font-size: 25px;
+    border: none !important;
+    border-radius: 25px;
+    color: white;
+    background-color: #da5345;
+}
+
+
+.todo-note {
+    border: solid #da5345 2px !important;
+    border-radius: 15px;
+    margin: 0px 0px 15px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.todo-note-inner > * {
+    color: #e2e2e2;
+}
+
+.headers {
+    display: flex;
+    flex-direction: row;
+}
+
+.headers > .header {
+    font-size: 30px;
+}
+
+.headers > .sub-header {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.todo-note-inner > .dates {
+    border: solid #da5345 2px !important;
+    border-radius: 15px;
+    width: 270px;
+    height: 100px;
+    flex-direction: column;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 11px 0px 0px 10px;
+}
+
+.special-utilities {
+    background-color: #da5345;
+    margin: -10px;
+    border-radius: 0px 12px 12px 0px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(70px);
+    transition: ease-in-out 0.2s;
+}
+
+.special-utilities > .delete-note {
+    width: 80%;
+    height: 55px;
+    background-color: transparent;
+    border: solid white 2px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+.toggled {
+    transform: translateX(0px);
+}

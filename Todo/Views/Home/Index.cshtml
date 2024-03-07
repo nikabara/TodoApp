@@ -1,0 +1,52 @@
+﻿<head>
+    <link href="~/css/HomeIndex.css" rel="stylesheet" />
+</head>
+
+@model List<TodoList>
+
+@foreach (var item in Model)
+{
+    <div class="todo-note">
+        <div class="todo-note-inner">
+            <div class="headers">
+                <h1 class="main-header header">@item.Header :</h1>
+                <h1 class="sub-header header"> @item.SubHeader</h1>
+            </div>
+
+            <p class="descr">"@item.Description dont mess this shit up again or we are going to fail AGAIN"</p>
+
+            <div class="dates">
+                <p>Added : @item.SubmissionsDate</p>
+                <p>Due to : @item.DueDate</p>
+            </div>
+        </div>
+
+        <div class="special-utilities" id="special-utilities">
+            <button class="delete-note"><i class="bi bi-clipboard-x"></i></button>
+        </div>
+    </div>
+}
+@foreach (var item in Model)
+{
+    <div class="todo-note">
+        <div class="todo-note-inner">
+            <div class="headers">
+                <h1 class="main-header header">@item.Header :</h1>
+                <h1 class="sub-header header"> @item.SubHeader</h1>
+            </div>
+
+            <p class="descr">"@item.Description dont mess this shit up again or we are going to fail AGAIN"</p>
+
+            <div class="dates">
+                <p>Added : @item.SubmissionsDate</p>
+                <p>Due to : @item.DueDate</p>
+            </div>
+        </div>
+
+        <div class="special-utilities" id="special-utilities">
+            <button class="delete-note"><i class="bi bi-clipboard-x"></i></button>
+        </div>
+    </div>
+}
+
+<script src="~/js/HomeIndex.js"></script>

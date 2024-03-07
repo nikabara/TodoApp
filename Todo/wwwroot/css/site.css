@@ -1,0 +1,82 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 0px;
+}
+
+.modify-btns {
+    width: 80%;
+    height: 50px;
+    font-size: 25px;
+    border: none !important;
+    border-radius: 25px;
+    color: white;
+    background-color: #da5345;
+}
+
+.create-todo, .edit-todo {
+    padding-top: 5px;
+}
+
+.main {
+    height: auto;
+    display: flex;
+    background-color: #161616 !important;
+}
+
+.side-bar {
+    height: 100vh;
+    width: 18%;
+    background-color: #161616 !important;
+    border-right: solid #696969 2px;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.side-bar-section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+}
+
+.modify-btns {
+    width: 80%;
+    height: 50px;
+    font-size: 25px;
+    border: none !important;
+    border-radius: 25px;
+    color: white;
+    background-color: #da5345;
+}
+
+.main-item {
+    width: 82%;
+    height: 100%;
+    padding: 25px 10px;
+}
+
+.side-bar-section > a > i {
+    color: white;
+}

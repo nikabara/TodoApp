@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Todo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Edit.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/Todo.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" />
+</head>
+<body>
+
+    <div class="main">
+        <aside class="side-bar">
+            <section class="side-bar-section">
+                <a class="create-todo modify-btns"><i class="bi bi-node-plus"></i></a>
+                <a asp-controller="TodoList" asp-action="Edit" class="edit-todo modify-btns"><i class="bi bi-pencil-square"></i></a>
+                <button class="remove-todo modify-btns"><i class="bi bi-trash"></i></button>
+            </section>
+        </aside>
+
+        <div class="main-item">
+            @RenderBody()
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
