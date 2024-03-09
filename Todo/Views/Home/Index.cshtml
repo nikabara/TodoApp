@@ -1,8 +1,4 @@
-﻿<head>
-    <link href="~/css/HomeIndex.css" rel="stylesheet" />
-</head>
-
-@model List<TodoList>
+﻿@model List<TodoList>
 
 @foreach (var item in Model)
 {
@@ -23,6 +19,7 @@
 
         <div class="special-utilities" id="special-utilities">
             <button class="delete-note"><i class="bi bi-clipboard-x"></i></button>
+            <a asp-controller="TodoList" asp-action="Edit" class="edit-note" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
         </div>
     </div>
 }
@@ -45,8 +42,7 @@
 
         <div class="special-utilities" id="special-utilities">
             <button class="delete-note"><i class="bi bi-clipboard-x"></i></button>
+            <a asp-controller="TodoList" asp-action="Edit" class="edit-note" asp-route-id="@item.Id"><i class="bi bi-pencil-square"></i></a>
         </div>
     </div>
 }
-
-<script src="~/js/HomeIndex.js"></script>

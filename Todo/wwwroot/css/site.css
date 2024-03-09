@@ -31,10 +31,6 @@ body {
     background-color: #da5345;
 }
 
-.create-todo, .edit-todo {
-    padding-top: 5px;
-}
-
 .main {
     height: auto;
     display: flex;
@@ -53,7 +49,7 @@ body {
 
 .side-bar-section {
     width: 100%;
-    height: 300px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -80,3 +76,74 @@ body {
 .side-bar-section > a > i {
     color: white;
 }
+
+/*Add task sidebar animation*/
+.bi-plus-circle {
+    transition: ease-in-out 0.2s;
+    margin-left: 57px;
+}
+
+.create-todo {
+    transition: ease-in-out 0.2s;
+    text-decoration: none !important;
+    overflow: hidden;
+}
+
+.create-todo:hover > .bi-plus-circle {
+    margin-left: -30px;
+}
+
+.create-todo::after {
+    content: "Add task";
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    transform: translateX(200px);
+    transition: ease-in-out 0.2s;
+}
+
+.create-todo:hover::after {
+    display: flex;
+    text-decoration: none !important;
+    color: white;
+    transform: translateX(0px);
+    margin-left: 10px;
+}
+/*Add task sidebar animation*/
+
+
+/*Modify sidebar animation*/
+.bi-list-ul {
+    transition: ease-in-out 0.2s;
+    margin-left: 85px;
+}
+
+.modify-todo {
+    transition: ease-in-out 0.2s;
+    text-decoration: none !important;
+    overflow: hidden;
+}
+
+.modify-todo:hover > .bi-list-ul {
+    margin-left: -30px;
+}
+
+.modify-todo::after {
+    content: "Modify tasks";
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    transform: translateX(200px);
+    transition: ease-in-out 0.2s;
+}
+
+.modify-todo:hover::after {
+    display: flex;
+    text-decoration: none !important;
+    color: white;
+    transform: translateX(0px);
+    margin-left: 10px;
+}
+/*Modify sidebar animation*/

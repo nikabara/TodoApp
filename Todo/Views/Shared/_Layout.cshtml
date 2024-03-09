@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/Edit.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/Todo.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/HomeIndex.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" />
 </head>
@@ -16,9 +17,9 @@
     <div class="main">
         <aside class="side-bar">
             <section class="side-bar-section">
-                <a class="create-todo modify-btns"><i class="bi bi-node-plus"></i></a>
-                <a asp-controller="TodoList" asp-action="Edit" class="edit-todo modify-btns"><i class="bi bi-pencil-square"></i></a>
-                <button class="remove-todo modify-btns"><i class="bi bi-trash"></i></button>
+                <a class="create-todo modify-btns"><i class="bi bi-plus-circle"></i></a>
+                @*<a asp-controller="TodoList" asp-action="Edit" class="edit-todo modify-btns"><i class="bi bi-pencil-square"></i></a>*@
+                <button class="modify-todo modify-btns"><i class="bi bi-list-ul"></i></button>
             </section>
         </aside>
 
@@ -31,6 +32,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/HomeIndex.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

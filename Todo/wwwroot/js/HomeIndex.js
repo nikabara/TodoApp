@@ -1,4 +1,4 @@
-let remove_toggle = document.querySelector(".remove-todo");
+let remove_toggle = document.querySelector(".modify-todo");
 var special_utilities = document.querySelectorAll(".special-utilities");
 
 
