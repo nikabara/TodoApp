@@ -1,23 +1,39 @@
 ﻿@model TodoList
 
 <form class="main-edit" method="post">
+    <input type="date" asp-for="SubmissionsDate" hidden/>
+    
     <div class="edit-div">
         <p>Header</p>
-        <input asp-for="Header" class="header-edit-input" type="text" value="" placeholder="@Model.Header"  />
+        <span asp-validation-for="Header"></span>
+        <input asp-for="Header" class="header-edit-input" type="text"  />
     </div>
 
     <div class="edit-div">
         <p>Sub-Header</p>
-        <input asp-for="SubHeader" class="sub-header-edit-input" type="text" value="" placeholder="@Model.SubHeader"  />
+        <span asp-validation-for="SubHeader"></span>
+        <input asp-for="SubHeader" class="sub-header-edit-input" type="text"  />
     </div>
 
     <div class="edit-div">
         <p>Description</p>
-        <textarea asp-for="Description" class="descr-edit-textarea" value="" placeholder="@Model.Description"></textarea>
+        <span asp-validation-for="Description"></span>
+        <textarea asp-for="Description" class="descr-edit-textarea" ></textarea>
     </div>
 
-    <div class="edit-btns">
+    <div class="edit-div">
+        <p>Due-date</p>
+        <input class="due-date-input" type="date" asp-for="DueDate"/>
+    </div>
+
+    <div class="edit-btns utility-buttons">
         <button class="edit-btn-back" asp-controller="Home" asp-action="Index">Go back</button>
         <button class="edit-btn-edit" type="submit">Edit</button>
     </div>
 </form>
+
+@section Scripts {
+    @{ 
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}

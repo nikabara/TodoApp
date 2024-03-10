@@ -9,11 +9,17 @@
                 <h1 class="sub-header header"> @item.SubHeader</h1>
             </div>
 
-            <p class="descr">"@item.Description dont mess this shit up again or we are going to fail AGAIN"</p>
+            <p class="descr">"@item.Description"</p>
 
             <div class="dates">
-                <p>Added : @item.SubmissionsDate</p>
-                <p>Due to : @item.DueDate</p>
+                <p>Added : @item.SubmissionsDate.ToString("MM/dd/yyyy")</p>
+                <p>
+                    Due to :
+                    @if (item.DueDate != null)
+                    {
+                        @item.DueDate.Value.ToString("MM/dd/yyyy")
+                    }
+                </p>
             </div>
         </div>
 
@@ -32,11 +38,17 @@
                 <h1 class="sub-header header"> @item.SubHeader</h1>
             </div>
 
-            <p class="descr">"@item.Description dont mess this shit up again or we are going to fail AGAIN"</p>
+            <p class="descr">"@item.Description"</p>
 
             <div class="dates">
-                <p>Added : @item.SubmissionsDate</p>
-                <p>Due to : @item.DueDate</p>
+                <p>Added : @item.SubmissionsDate.ToString("MM/dd/yyyy")</p>
+                <p>
+                    Due to :
+                    @if (item.DueDate != null)
+                    {
+                        @item.DueDate.Value.ToString("MM/dd/yyyy")
+                    }
+                </p>
             </div>
         </div>
 

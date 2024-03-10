@@ -97,6 +97,7 @@ body {
     content: "Add task";
     display: inline-block;
     font-size: 15px;
+    margin-top: 8px;
     font-weight: 700;
     color: white;
     transform: translateX(200px);
