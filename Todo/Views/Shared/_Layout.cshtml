@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/css/Edit.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/Todo.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/HomeIndex.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/Create.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" />
 </head>
@@ -17,7 +18,7 @@
     <div class="main">
         <aside class="side-bar">
             <section class="side-bar-section">
-                <a class="create-todo modify-btns"><i class="bi bi-plus-circle"></i></a>
+                <a asp-controller="TodoList" asp-action="Create" class="create-todo modify-btns"><i class="bi bi-plus-circle"></i></a>
                 @*<a asp-controller="TodoList" asp-action="Edit" class="edit-todo modify-btns"><i class="bi bi-pencil-square"></i></a>*@
                 <button class="modify-todo modify-btns"><i class="bi bi-list-ul"></i></button>
             </section>

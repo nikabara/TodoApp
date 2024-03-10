@@ -13,6 +13,20 @@ namespace Todo.Controllers
             _context = context;
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(TodoList obj)
+        {
+            obj.SubmissionsDate = DateTime.Now;
+            _context.TodoList.Add(obj);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult Edit(int? id)
         {
             if (id == 0 || id == null)
@@ -40,7 +54,7 @@ namespace Todo.Controllers
                 _context.SaveChanges();
                 return RedirectToAction("Index", "Home");
             }
-
+                
             return View();
         }
     }
