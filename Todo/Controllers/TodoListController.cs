@@ -57,5 +57,18 @@ namespace Todo.Controllers
                 
             return View();
         }
+
+        public IActionResult Delete(int id)
+        {
+            TodoList? obj = _context.TodoList.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            _context.TodoList.Remove(obj);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
