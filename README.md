@@ -1,2 +1,22 @@
 # TodoApp
-## Fully crud funcionality/operable/working todo web-app with database support written in asp.net (mvc) with C# html css and js
+## Task management web-app
+
+Fully crud Funcionality/Operable/Working todo web-app 
+with database **ms-sql** support written in 
+**asp.net** (MVC)
+
+### Used languages :
+* C#
+* JavaScript
+
+### Used markup :
+* .NET Blazor pages
+* Html5
+
+### Used packages :
+* Microsoft.EntityFrameworkCore.SqlServer
+* Microsoft.EntityFrameworkCore.Tools
+* Microsoft.EntityFrameworkCore
+
+### .NET version
+* .NET 7.0
