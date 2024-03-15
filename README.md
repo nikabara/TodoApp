@@ -12,6 +12,7 @@ with database **ms-sql** support written in
 ### Used markup :
 * .NET Blazor pages
 * Html5
+* Css
 
 ### Used packages :
 * Microsoft.EntityFrameworkCore.SqlServer
